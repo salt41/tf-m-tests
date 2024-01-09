@@ -80,6 +80,7 @@ add_subdirectory(multi_core/non_secure)
 add_subdirectory(nsid)
 add_subdirectory(fpu)
 add_subdirectory(spm)
+add_subdirectory(libafl)
 
 if (TFM_FUZZER_TOOL_TESTS AND TEST_FRAMEWORK_NS)
     if (NOT DEFINED TFM_FUZZER_TOOL_TESTS_CMAKE_INC_PATH)

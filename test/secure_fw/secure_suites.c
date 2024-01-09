@@ -40,6 +40,9 @@
 #ifdef EXTRA_S_TEST_SUITE
 #include "extra_s_tests.h"
 #endif
+#ifdef TEST_S_LIBAFL
+#include "libafl_s_tests.h"
+#endif
 
 static struct test_suite_t test_suites[] = {
 #ifdef TEST_S_IPC
@@ -95,6 +98,10 @@ static struct test_suite_t test_suites[] = {
 #ifdef EXTRA_S_TEST_SUITE
     /* Secure extra test cases */
     {&register_testsuite_extra_s_interface, 0, 0, 0},
+#endif
+
+#ifdef TEST_S_LIBAFL
+    {&register_testsuite_s_libafl_interface, 0, 0, 0},
 #endif
 
     /* End of test suites */
